@@ -1,0 +1,498 @@
+graph {
+    nodes {
+        id: 0
+        pos {
+            x: 0.0
+            y: 0.0
+        }
+    }
+    nodes {
+        id: 1
+        pos {
+            x: 1.0
+            y: 0.0
+        }
+    }
+    nodes {
+        id: 2
+        pos {
+            x: 4.0
+            y: 0.0
+        }
+    }
+    nodes {
+        id: 3
+        pos {
+            x: 5.0
+            y: 0.0
+        }
+    }
+    nodes {
+        id: 4
+        pos {
+            x: 0.0
+            y: 1.0
+        }
+    }
+    nodes {
+        id: 5
+        pos {
+            x: 1.0
+            y: 1.0
+        }
+    }
+    nodes {
+        id: 6
+        pos {
+            x: 4.0
+            y: 1.0
+        }
+    }
+    nodes {
+        id: 7
+        pos {
+            x: 5.0
+            y: 1.0
+        }
+    }
+    nodes {
+        id: 8
+        pos {
+            x: 0.0
+            y: 2.0
+        }
+    }
+    nodes {
+        id: 9
+        pos {
+            x: 1.0
+            y: 2.0
+        }
+    }
+    nodes {
+        id: 10
+        pos {
+            x: 2.0
+            y: 2.0
+        }
+    }
+    nodes {
+        id: 11
+        pos {
+            x: 4.0
+            y: 2.0
+        }
+    }
+    nodes {
+        id: 12
+        pos {
+            x: 5.0
+            y: 2.0
+        }
+    }
+    nodes {
+        id: 13
+        pos {
+            x: 0.0
+            y: 3.0
+        }
+    }
+    nodes {
+        id: 14
+        pos {
+            x: 1.0
+            y: 3.0
+        }
+    }
+    nodes {
+        id: 15
+        pos {
+            x: 3.0
+            y: 3.0
+        }
+    }
+    nodes {
+        id: 16
+        pos {
+            x: 4.0
+            y: 3.0
+        }
+    }
+    nodes {
+        id: 17
+        pos {
+            x: 5.0
+            y: 3.0
+        }
+    }
+    nodes {
+        id: 18
+        pos {
+            x: 0.0
+            y: 4.0
+        }
+    }
+    nodes {
+        id: 19
+        pos {
+            x: 1.0
+            y: 4.0
+        }
+    }
+    nodes {
+        id: 20
+        pos {
+            x: 4.0
+            y: 4.0
+        }
+    }
+    nodes {
+        id: 21
+        pos {
+            x: 5.0
+            y: 4.0
+        }
+    }
+    nodes {
+        id: 22
+        pos {
+            x: 0.0
+            y: 5.0
+        }
+    }
+    nodes {
+        id: 23
+        pos {
+            x: 1.0
+            y: 5.0
+        }
+    }
+    nodes {
+        id: 24
+        pos {
+            x: 4.0
+            y: 5.0
+        }
+    }
+    nodes {
+        id: 25
+        pos {
+            x: 5.0
+            y: 5.0
+        }
+    }
+    edges {
+        from_node_id: 0
+        to_node_id: 1
+    }
+    edges {
+        from_node_id: 0
+        to_node_id: 4
+    }
+    edges {
+        from_node_id: 1
+        to_node_id: 0
+    }
+    edges {
+        from_node_id: 1
+        to_node_id: 5
+    }
+    edges {
+        from_node_id: 2
+        to_node_id: 3
+    }
+    edges {
+        from_node_id: 2
+        to_node_id: 6
+    }
+    edges {
+        from_node_id: 3
+        to_node_id: 2
+    }
+    edges {
+        from_node_id: 3
+        to_node_id: 7
+    }
+    edges {
+        from_node_id: 4
+        to_node_id: 5
+    }
+    edges {
+        from_node_id: 4
+        to_node_id: 8
+    }
+    edges {
+        from_node_id: 4
+        to_node_id: 0
+    }
+    edges {
+        from_node_id: 5
+        to_node_id: 4
+    }
+    edges {
+        from_node_id: 5
+        to_node_id: 9
+    }
+    edges {
+        from_node_id: 5
+        to_node_id: 1
+    }
+    edges {
+        from_node_id: 6
+        to_node_id: 7
+    }
+    edges {
+        from_node_id: 6
+        to_node_id: 11
+    }
+    edges {
+        from_node_id: 6
+        to_node_id: 2
+    }
+    edges {
+        from_node_id: 7
+        to_node_id: 6
+    }
+    edges {
+        from_node_id: 7
+        to_node_id: 12
+    }
+    edges {
+        from_node_id: 7
+        to_node_id: 3
+    }
+    edges {
+        from_node_id: 8
+        to_node_id: 9
+    }
+    edges {
+        from_node_id: 8
+        to_node_id: 13
+    }
+    edges {
+        from_node_id: 8
+        to_node_id: 4
+    }
+    edges {
+        from_node_id: 9
+        to_node_id: 10
+    }
+    edges {
+        from_node_id: 9
+        to_node_id: 8
+    }
+    edges {
+        from_node_id: 9
+        to_node_id: 14
+    }
+    edges {
+        from_node_id: 9
+        to_node_id: 5
+    }
+    edges {
+        from_node_id: 10
+        to_node_id: 9
+    }
+    edges {
+        from_node_id: 11
+        to_node_id: 12
+    }
+    edges {
+        from_node_id: 11
+        to_node_id: 16
+    }
+    edges {
+        from_node_id: 11
+        to_node_id: 6
+    }
+    edges {
+        from_node_id: 12
+        to_node_id: 11
+    }
+    edges {
+        from_node_id: 12
+        to_node_id: 17
+    }
+    edges {
+        from_node_id: 12
+        to_node_id: 7
+    }
+    edges {
+        from_node_id: 13
+        to_node_id: 14
+    }
+    edges {
+        from_node_id: 13
+        to_node_id: 18
+    }
+    edges {
+        from_node_id: 13
+        to_node_id: 8
+    }
+    edges {
+        from_node_id: 14
+        to_node_id: 13
+    }
+    edges {
+        from_node_id: 14
+        to_node_id: 19
+    }
+    edges {
+        from_node_id: 14
+        to_node_id: 9
+    }
+    edges {
+        from_node_id: 15
+        to_node_id: 16
+    }
+    edges {
+        from_node_id: 16
+        to_node_id: 17
+    }
+    edges {
+        from_node_id: 16
+        to_node_id: 15
+    }
+    edges {
+        from_node_id: 16
+        to_node_id: 20
+    }
+    edges {
+        from_node_id: 16
+        to_node_id: 11
+    }
+    edges {
+        from_node_id: 17
+        to_node_id: 16
+    }
+    edges {
+        from_node_id: 17
+        to_node_id: 21
+    }
+    edges {
+        from_node_id: 17
+        to_node_id: 12
+    }
+    edges {
+        from_node_id: 18
+        to_node_id: 19
+    }
+    edges {
+        from_node_id: 18
+        to_node_id: 22
+    }
+    edges {
+        from_node_id: 18
+        to_node_id: 13
+    }
+    edges {
+        from_node_id: 19
+        to_node_id: 18
+    }
+    edges {
+        from_node_id: 19
+        to_node_id: 23
+    }
+    edges {
+        from_node_id: 19
+        to_node_id: 14
+    }
+    edges {
+        from_node_id: 20
+        to_node_id: 21
+    }
+    edges {
+        from_node_id: 20
+        to_node_id: 24
+    }
+    edges {
+        from_node_id: 20
+        to_node_id: 16
+    }
+    edges {
+        from_node_id: 21
+        to_node_id: 20
+    }
+    edges {
+        from_node_id: 21
+        to_node_id: 25
+    }
+    edges {
+        from_node_id: 21
+        to_node_id: 17
+    }
+    edges {
+        from_node_id: 22
+        to_node_id: 23
+    }
+    edges {
+        from_node_id: 22
+        to_node_id: 18
+    }
+    edges {
+        from_node_id: 23
+        to_node_id: 22
+    }
+    edges {
+        from_node_id: 23
+        to_node_id: 19
+    }
+    edges {
+        from_node_id: 24
+        to_node_id: 25
+    }
+    edges {
+        from_node_id: 24
+        to_node_id: 20
+    }
+    edges {
+        from_node_id: 25
+        to_node_id: 24
+    }
+    edges {
+        from_node_id: 25
+        to_node_id: 21
+    }
+}
+agent_tasks {
+    agent_id: 0
+    endpoints {
+        from_node_id: 0
+        to_node_id: 25
+    }
+}
+agent_tasks {
+    agent_id: 1
+    endpoints {
+        from_node_id: 22
+        to_node_id: 3
+    }
+}
+agent_tasks {
+    agent_id: 2
+    endpoints {
+        from_node_id: 9
+        to_node_id: 11
+    }
+}
+agent_tasks {
+    agent_id: 3
+    endpoints {
+        from_node_id: 14
+        to_node_id: 16
+    }
+}
+agent_tasks {
+    agent_id: 4
+    endpoints {
+        from_node_id: 12
+        to_node_id: 8
+    }
+}
+agent_tasks {
+    agent_id: 5
+    endpoints {
+        from_node_id: 17
+        to_node_id: 13
+    }
+}

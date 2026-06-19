@@ -3,6 +3,7 @@
 
 #include <boost/program_options.hpp>
 
+#include <chrono>
 #include <filesystem>
 #include <iostream>
 #include <memory>

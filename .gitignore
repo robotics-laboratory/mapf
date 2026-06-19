@@ -1,4 +1,4 @@
-# Ignore BAZEL files
+yj# Ignore BAZEL files
 MODULE.bazel.lock
 /bazel-*
 
@@ -12,3 +12,21 @@ MODULE.bazel.lock
 
 # Distable toolchain temporaly
 /toolchain
+
+# macOS
+.DS_Store
+
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.run.xml
+*.synctex.gz
+*.toc
+*-blx.bib
+
+# MCAP recordings (heavy files)
+data/*.mcap

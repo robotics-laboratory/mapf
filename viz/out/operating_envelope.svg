@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="460" viewBox="0 0 760 460" font-family="sans-serif" font-size="13">
+<rect width="760" height="460" fill="white"/>
+<line x1="78" y1="404.0" x2="736" y2="404.0" stroke="#e8e8ee"/>
+<text x="68" y="408.0" text-anchor="end" fill="#555">0.1</text>
+<line x1="78" y1="309.0" x2="736" y2="309.0" stroke="#e8e8ee"/>
+<text x="68" y="313.0" text-anchor="end" fill="#555">1</text>
+<line x1="78" y1="214.0" x2="736" y2="214.0" stroke="#e8e8ee"/>
+<text x="68" y="218.0" text-anchor="end" fill="#555">10</text>
+<line x1="78" y1="119.0" x2="736" y2="119.0" stroke="#e8e8ee"/>
+<text x="68" y="123.0" text-anchor="end" fill="#555">100</text>
+<line x1="78" y1="24.0" x2="736" y2="24.0" stroke="#e8e8ee"/>
+<text x="68" y="28.0" text-anchor="end" fill="#555">1000</text>
+<line x1="78.0" y1="404" x2="78.0" y2="409" stroke="#888"/>
+<text x="78.0" y="424" text-anchor="middle" fill="#555">0</text>
+<line x1="234.7" y1="404" x2="234.7" y2="409" stroke="#888"/>
+<text x="234.7" y="424" text-anchor="middle" fill="#555">50</text>
+<line x1="391.3" y1="404" x2="391.3" y2="409" stroke="#888"/>
+<text x="391.3" y="424" text-anchor="middle" fill="#555">100</text>
+<line x1="548.0" y1="404" x2="548.0" y2="409" stroke="#888"/>
+<text x="548.0" y="424" text-anchor="middle" fill="#555">150</text>
+<line x1="704.7" y1="404" x2="704.7" y2="409" stroke="#888"/>
+<text x="704.7" y="424" text-anchor="middle" fill="#555">200</text>
+<line x1="78" y1="24" x2="78" y2="404" stroke="#444"/>
+<line x1="78" y1="404" x2="736" y2="404" stroke="#444"/>
+<text x="407" y="448" text-anchor="middle" fill="#333">number of agents</text>
+<text x="16" y="214" text-anchor="middle" fill="#333" transform="rotate(-90 16 214)">runtime (ms, log scale)</text>
+<polyline points="84.3,307.4 87.4,166.2 90.5,60.8" fill="none" stroke="#d1495b" stroke-width="2.5"/>
+<circle cx="84.3" cy="307.4" r="4.5" fill="#d1495b" stroke="white" stroke-width="1"/>
+<circle cx="87.4" cy="166.2" r="4.5" fill="#d1495b" stroke="white" stroke-width="1"/>
+<circle cx="90.5" cy="60.8" r="4.5" fill="#d1495b" stroke="white" stroke-width="1"/>
+<polyline points="90.5,370.7 128.1,298.0 178.3,268.9 234.7,210.5 391.3,175.3 704.7,105.5" fill="none" stroke="#2b6cf0" stroke-width="2.5"/>
+<circle cx="90.5" cy="370.7" r="4.5" fill="#2b6cf0" stroke="white" stroke-width="1"/>
+<circle cx="128.1" cy="298.0" r="4.5" fill="#2b6cf0" stroke="white" stroke-width="1"/>
+<circle cx="178.3" cy="268.9" r="4.5" fill="#2b6cf0" stroke="white" stroke-width="1"/>
+<circle cx="234.7" cy="210.5" r="4.5" fill="#2b6cf0" stroke="white" stroke-width="1"/>
+<circle cx="391.3" cy="175.3" r="4.5" fill="#2b6cf0" stroke="white" stroke-width="1"/>
+<circle cx="704.7" cy="105.5" r="4.5" fill="#2b6cf0" stroke="white" stroke-width="1"/>
+<text x="121.9" y="58.8" fill="#d1495b">A* becomes intractable beyond ~4 agents</text>
+<rect x="594" y="26" width="150" height="46" fill="white" stroke="#ddd" rx="4"/>
+<line x1="604" y1="40" x2="628" y2="40" stroke="#d1495b" stroke-width="2.5"/><text x="636" y="44" fill="#333">A* (optimal)</text>
+<line x1="604" y1="60" x2="628" y2="60" stroke="#2b6cf0" stroke-width="2.5"/><text x="636" y="64" fill="#333">PIBT</text>
+</svg>

@@ -1,4 +1,4 @@
-FROM amd64/ubuntu:24.10 AS mapf-base
+FROM ubuntu:24.04 AS mapf-base
 
 WORKDIR /tmp
 
@@ -77,11 +77,14 @@ RUN wget https://github.com/bazelbuild/buildtools/releases/download/v7.3.1/build
     && chmod +x buildifier-linux-${TARGETARCH} \
     && mv buildifier-linux-${TARGETARCH} /usr/bin/buildifier
 
-# Install MCAP CLI
+# Python + matplotlib for the experiment plots (viz/plot_*.py).
 
-RUN wget https://github.com/foxglove/mcap/releases/download/releases%2Fmcap-cli%2Fv0.0.50/mcap-linux-${TARGETARCH} \
-    && chmod +x mcap-linux-${TARGETARCH} \
-    && mv mcap-linux-${TARGETARCH} /usr/bin/mcap
+RUN apt-get update -q \
+    && apt-get install -yq --no-install-recommends \
+    python3 \
+    python3-matplotlib \
+    && rm -rf /var/lib/apt/lists/* \
+    && apt-get clean
 
 WORKDIR /mapf
 ENTRYPOINT ["/bin/zsh", "-lc"]

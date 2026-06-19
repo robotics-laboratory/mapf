@@ -73,9 +73,12 @@ models::MAPFSolution BFSSolver::FindSolution(const models::MAPFProblem& mapf_pro
     open_set.push(start_state);
     cost_to_come[start_state] = 0;
 
+    nodes_expanded_ = 0;
+
     while (!open_set.empty()) {
         auto current_state = open_set.front();
         open_set.pop();
+        ++nodes_expanded_;
 
         if (current_state == finish_state) {
             std::unordered_map<models::AgentId, graph::NodeIdsList> paths;

@@ -1,0 +1,39 @@
+graph {
+    nodes { id: 0  pos { x: 0.0 y: 0.0 } }
+    nodes { id: 1  pos { x: 1.0 y: 0.0 } }
+    nodes { id: 2  pos { x: 2.0 y: 0.0 } }
+    nodes { id: 3  pos { x: 3.0 y: 0.0 } }
+    nodes { id: 4  pos { x: 4.0 y: 0.0 } }
+    nodes { id: 5  pos { x: 5.0 y: 0.0 } }
+    nodes { id: 6  pos { x: 6.0 y: 0.0 } }
+    nodes { id: 7  pos { x: 7.0 y: 0.0 } }
+    nodes { id: 8  pos { x: 3.0 y: 1.0 } }
+
+    # main corridor
+    edges { from_node_id: 0  to_node_id: 1 }
+    edges { from_node_id: 1  to_node_id: 0 }
+    edges { from_node_id: 1  to_node_id: 2 }
+    edges { from_node_id: 2  to_node_id: 1 }
+    edges { from_node_id: 2  to_node_id: 3 }
+    edges { from_node_id: 3  to_node_id: 2 }
+    edges { from_node_id: 3  to_node_id: 4 }
+    edges { from_node_id: 4  to_node_id: 3 }
+    edges { from_node_id: 4  to_node_id: 5 }
+    edges { from_node_id: 5  to_node_id: 4 }
+    edges { from_node_id: 5  to_node_id: 6 }
+    edges { from_node_id: 6  to_node_id: 5 }
+    edges { from_node_id: 6  to_node_id: 7 }
+    edges { from_node_id: 7  to_node_id: 6 }
+
+    # side pocket at node 3
+    edges { from_node_id: 3  to_node_id: 8 }
+    edges { from_node_id: 8  to_node_id: 3 }
+}
+agent_tasks {
+    agent_id: 0
+    endpoints { from_node_id: 0  to_node_id: 7 }
+}
+agent_tasks {
+    agent_id: 1
+    endpoints { from_node_id: 7  to_node_id: 0 }
+}

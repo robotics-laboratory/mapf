@@ -1,5 +1,9 @@
 # MAPF
-Experiments in Multi-Agent Pathfinding
+Experiments in Multi-Agent Pathfinding.
+
+The repository implements three solvers (BFS, A*, PIBT) on grid graphs, a benchmark
+and ablation test suite, a JSON exporter, and a dependency-free Python visualizer that
+turns exported solutions into an interactive HTML animation and an SVG trajectory image.
 
 ## Getting started
 
@@ -66,62 +70,46 @@ Use paths, relative to MODULE directory.
 bazel run //solver:main -- -s bfs_solver -i data/mapf_problem_1.pb.txt -o data/mapf_solution_1.pb.txt
 ```
 
-## Running simulator
+## Visualizing a solution
 
-### Show information about simulator binary options
-
-```sh
-bazel run //simulator:main -- --help
-```
-
-### List available solver names
+Solve an instance and write a JSON description (map, obstacles, every agent's path) suitable for the visualizer:
 
 ```sh
-bazel run //simulator:main -- --list-solvers
+bazel run //solver:export_solution -- \
+    --width 32 --height 20 --agents 40 --obstacles \
+    --solver pibt_solver --out viz/data/arena.json
 ```
 
-Simulator input is a file with text formated [MAPFProblem](models/proto/models.proto#L22) protobuf message. [See](data/mapf_problem_1.pb.txt) example of file structure.
-
-Simulator output is a MCAP file with serialized [Scene](scene/proto/scene.proto) protobuf message.
-
-Use paths, relative to MODULE directory.
-
-### Simulator run command example
+Render an interactive HTML animation and a static SVG trajectory image:
 
 ```sh
-bazel run //simulator:main -- -s bfs_solver -i data/mapf_problem_1.pb.txt -o data/scene.mcap
+python3 viz/visualize.py viz/data/arena.json --out viz/out
 ```
+
+Open `viz/out/arena.html` in a browser for the animation, or use `viz/out/arena_trails.svg` as a static figure.
 
 ## Repository contents
 
 Guide to packages:
 
-* __geom__: Package with geometry primitives (`Vec2`, floating point number comparators, etc.). See __geom/tests__ for usage examples, __geom/proto__ for available proto-definitions.
+* __geom__: Geometry primitives (`Vec2`, floating point comparators). See __geom/tests__ for usage and __geom/proto__ for proto definitions.
 
-* __graph__: Package with graph primitives (`Node`, `Edge`, `Endpoints`, etc.). See __graph/test__ for usage examples, __graph/proto__ for available proto-definitions.
+* __graph__: Graph primitives (`Node`, `Edge`, `Endpoints`). See __graph/test__ for usage and __graph/proto__ for proto definitions.
 
-* __models__: Package with MAPF-problem specific primitives (`AgentState`, `AgentTask`, `AgentPath`, `MAPFProblem`, `MAPFSolution`, etc.). See __models/test__ for usage examples, __models/proto__ for available proto-definitions.
-
-* __scene__: Package with scene primitive, being recorded during simulation. See __models/proto__ for available proto-definitions.
-
-* __simulator__: Package with simulator primitives. The simulator is implemented using a single-threaded [actor model](https://en.wikipedia.org/wiki/Actor_model).
-    
-    * __simulator/acotrs__: Available actors declarations, `Actor` interface is defined [here](simulator/actors/include/actors/actor.h).
-
-    * __simulator/context__: Global simulation context, holding current timestamp and `EventBus`, which is an object, that encapsulates interaction between different actors.
-
-    * __simulator/event__: Event primitives, which encapsulates messages handling in runtime.
-
-    * __simulator/launcher__: Simulation launcher, running event loop.
-
-    * __simulator/main__: Simulator binary. See [CLI-options](simulator/main/src/main.cpp#L24) to determine available running modes.
-
-    * __simulator/messages__: Available messages declarations. `Message` interface is defined [here](simulator/messages/include/messages/message.h).
+* __models__: MAPF problem types (`AgentState`, `AgentTask`, `AgentPath`, `MAPFProblem`, `MAPFSolution`). See __models/test__ for usage and __models/proto__ for proto definitions.
 
 * __solver__: Package with available MAPF-problem solvers. 
 
-    * __solver/solvers__: Available solvers declarations, `Solver` interface is defined [here](solver/solvers/include/solvers/solver_base.h).
+    * __solver/solvers__: Solver implementations (BFS, A*, PIBT). The `Solver` interface is defined [here](solver/solvers/include/solvers/solver_base.h).
 
-    * __solver/factory__: Factory with registered solvers. After registering solver in [factory constructor](solver/factory/src/solver_factory.cpp#L11), it automatically becomes available in CLI-options.
+    * __solver/factory__: Factory with registered solvers. After registering a solver in [the factory constructor](solver/factory/src/solver_factory.cpp), it automatically becomes available in CLI options.
 
-    * __solver/main__: Sover binary. See [CLI-options](solver/main/src/main.cpp#L17) to determine available running modes.
+    * __solver/main__: Solver binary. See [CLI options](solver/main/src/main.cpp) for the supported flags.
+
+    * __solver/tools__: `export_solution` binary — solves an arena instance and writes a JSON file consumed by the visualizer.
+
+    * __solver/tests__: GoogleTest correctness tests plus the benchmark, ablation and statistical experiments (`Experiment.OperatingEnvelope`, `Experiment.LargeScale`, `Experiment.Ablation`, `Experiment.Suboptimality`).
+
+* __viz__: Standard-library Python visualizer. `visualize.py` renders a JSON solution to HTML + SVG; `plot_envelope.py` renders the operating-envelope plot; `plot_suboptimality.py` renders the statistical box-plots.
+
+* __data__: Example MAPF problems (text-format protobuf).

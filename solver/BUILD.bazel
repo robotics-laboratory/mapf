@@ -1,4 +1,4 @@
-load("@rules_cc//cc:defs.bzl", "cc_binary", "cc_library")
+load("@rules_cc//cc:defs.bzl", "cc_binary", "cc_library", "cc_test")
 
 package(default_visibility = ["//visibility:public"])
 
@@ -33,9 +33,20 @@ cc_binary(
     ],
 )
 
+cc_binary(
+    name = "export_solution",
+    srcs = ["tools/src/export_solution.cpp"],
+    deps = [
+        ":factory",
+        ":solvers",
+        "//graph",
+        "//models",
+    ],
+)
+
 cc_test(
     name = "solvers_tests",
-    size = "small",
+    size = "large",
     srcs = glob(["tests/*.cpp"]),
     deps = [
         ":solvers",
